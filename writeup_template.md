@@ -135,6 +135,7 @@ I used ```display info``` and ```draw_lane``` function along with functions from
 ### Pipeline (video)
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
+Finally I wrote Image Processing Pipeline as ```ImageProcessing``` which further uses ```Line``` class to update lane data in video frame, and use ```intercept_checker``` to validate lane found . It gos through all the steps developed so far: image pipeline, lane detection, polynomial construction, curvature and center calculation and display of lane and information.
 
 Here's a [link to my video result](./project_video_output.mp4)
 

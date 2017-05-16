@@ -111,19 +111,19 @@ I wrote a class called ``PolyFit`` by collecting all required functions and shar
 
 ![alt text][image4]
 
- Once the starting polynomial is found, the consecutive images in video frame get benefited from previously found polynomial and use ```polyfit_using_prev_fit```. Following is the result from this step:
+ Once the starting polynomial is found, the consecutive images in video frame get benefited from previously found polynomial and use ```polyfit_using_prev_fit``` within function ```skip_window_search```. Following is the result from this step:
  
 ![alt text][image5]
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I did this in lines # through # in my code in `my_other_file.py`
+In my PolyFit class at cell 17, there is ```curvature_and_center_dist``` function which takes polynomial coefficients and lane indices and calculates curvature and center. Sample curvature and center has been produced at cell 20.
 
 
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
+I used ```display info``` and ```draw_lane``` function along with functions from ```PolyFit``` class to produce lane plotted image. ```draw_lane``` function interestingly use inverse perspective transform using ```Minv``` which was calculated while we did perspective transform. These are shown in cell-21,22 and 23. These are few sample outpus:
 
 ![alt text][image6]
 

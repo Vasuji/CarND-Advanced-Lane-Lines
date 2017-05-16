@@ -40,13 +40,13 @@ The goals / steps of this project are the following:
 
 You're reading it!
 
-
+*** This writeup follows all work done in ```CARND-Project4.ipynb```***
 
 ### Camera Calibration
 
 #### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
 
-The code for this step is contained in the 2,3, and 4 cell of the IPython notebook called `Project4.ipynb`. 
+The code for this step is contained in the 2,3, and 4 cell of the IPython notebook called `CARND-Project4.ipynb`. 
 
 I start by preparing "object points", which will be the (x, y, z) coordinates of the chessboard corners in the world. Here I am assuming the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image.  Thus, `objp` is just a replicated array of coordinates, and `objpoints` will be appended with a copy of it every time I successfully detect all chessboard corners in a test image.  `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
 
@@ -150,15 +150,15 @@ Here's a [link to my video result](./project_video_output.mp4)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-1. Shadow: Shadow is one of the issue which changes the pixel values suddenly, there should be some method( for example: make a quick study of neighbourhood pixel values to identify it is shadow and change threshold values) to acknowledge there is shadow now and threshold value has to be changed in this case.
+1. ***Shadow***: Shadow is one of the issue which changes the pixel values suddenly, there should be some method( for example: make a quick study of neighbourhood pixel values to identify it is shadow and change threshold values) to acknowledge there is shadow now and threshold value has to be changed in this case.
 
-2. Yellow line detection: Yellow line detection is very different then white line detection. I implemented other colorspace except ```RBG``` for binary image.
+2. ***Yellow line detection***: Yellow line detection is very different then white line detection. I implemented other colorspace except ```RBG``` for binary image.
 
-3. More then two lanes detected: This may occur if we ignore some validation step for two lines being a pair og lane. I used ```intercept_checker``` in cell 25 which decides whether two line detected are pair of lane.
+3. ***More then two lanes detected***: This may occur if we ignore some validation step for two lines being a pair og lane. I used ```intercept_checker``` in cell 25 which decides whether two line detected are pair of lane.
 
-4. Sharp bendings: My pipeline could not perform good in extra challange videos. This is mainly because of many shadows and sharpbendings.
+4. ***Sharp bendings***: My pipeline could not perform good in extra challange videos. This is mainly because of many shadows and sharpbendings.
 
-5. Rainy day and poor vision: In these cases only camera photos may not provide enough information.
+5. ***Rainy day and poor vision***: In these cases only camera photos may not provide enough information.
 
 
 

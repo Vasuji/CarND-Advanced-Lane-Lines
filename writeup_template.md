@@ -39,6 +39,8 @@ The goals / steps of this project are the following:
 
 You're reading it!
 
+
+
 ### Camera Calibration
 
 #### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
@@ -50,6 +52,11 @@ I start by preparing "object points", which will be the (x, y, z) coordinates of
 I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 
 ![alt text][image1]
+
+
+----------------
+
+
 
 ### Pipeline (single images)
 
@@ -110,7 +117,11 @@ I implemented this step in lines # through # in my code in `yet_another_file.py`
 
 ![alt text][image6]
 
----
+
+-----------------
+
+
+
 
 ### Pipeline (video)
 
@@ -118,7 +129,12 @@ I implemented this step in lines # through # in my code in `yet_another_file.py`
 
 Here's a [link to my video result](./project_video.mp4)
 
----
+-------------------
+
+
+
+
+
 
 ### Discussion
 

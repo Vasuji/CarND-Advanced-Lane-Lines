@@ -64,7 +64,7 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 
 #### 1. Provide an example of a distortion-corrected image.
 
-The distortation matrix ```mtx``` and distortion coefficients ```dst``` calculated during camera calibration is saved in pickle file which can be used whenever required. I used that pickle file and produced undistorted images using function ```undistort ``` at cell 7 and 8 . Following are the sample undistorted images I produced.
+The camera matrix ```mtx``` and distortion coefficients ```dst``` calculated during camera calibration is saved in pickle file which can be used whenever required. I used that pickle file and produced undistorted images using function ```undistort ``` at cell 7 and 8 . Following are the sample undistorted images I produced.
 
 ![alt text][image1]
 
@@ -72,7 +72,8 @@ The distortation matrix ```mtx``` and distortion coefficients ```dst``` calculat
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`).  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
+I used a combination of color and gradient thresholds to generate a binary image. These steps are in cell:14,15,16,17. I specifically applied ``` hls_lthresh``` and ```lab_bthresh``` and combined these two to produce final output from ```pipeline``` function.  Here's an example of my output for this step.  
+
 
 ![alt text][image2]
 

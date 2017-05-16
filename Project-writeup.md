@@ -106,11 +106,11 @@ I verified that my perspective transform was working as expected by drawing the 
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-I wrote a class called ``PolyFit`` by collecting all required functions and shared data to find polynomial and curvature etc. First I applied sliding window search as in function ```sliding_window_polyfit``` function in my `PolyFit` class to find initial polynomial and its starting point by using ```histogram``` and ```poly_coff``` supporting function within same class. Following is the image from this step:
+I wrote a class called ``PolyFit`` by collecting all required functions and shared data to find polynomial and curvature etc. First I applied sliding window search as in function ```sliding_window_polyfit``` function in my `PolyFit` class to find initial polynomial and its starting point by using ```histogram``` and ```poly_coff``` supporting function within same class. Following are the images from this step:
 
 ![alt text][image4]
 
- Once the starting polynomial is found, the consecutive images in video frame get benefited from previously found polynomial and use ```polyfit_using_prev_fit``` within function ```skip_window_search```. Following is the result from this step:
+ Once the starting polynomial is found, the consecutive images in video frame get benefited from previously found polynomial and use ```polyfit_using_prev_fit``` within function ```skip_window_search```. Following are the results from this step:
  
 ![alt text][image5]
 
@@ -154,7 +154,7 @@ Here's a [link to my video result](./project_video_output.mp4)
 
 2. ***Yellow line detection***: Yellow line detection is very different then white line detection. I implemented other colorspace except ```RBG``` for binary image.
 
-3. ***More then two lanes detected***: This may occur if we ignore some validation step for two lines being a pair og lane. I used ```intercept_checker``` in cell 25 which decides whether two line detected are pair of lane.
+3. ***More then two lanes detected***: This may occur if we ignore some validation step for two lines being a pair of lane. I used ```intercept_checker``` in cell 25 which decides whether two lines detected are pair of lane.
 
 4. ***Sharp bendings***: My pipeline could not perform good in extra challange videos. This is mainly because of many shadows and sharpbendings.
 

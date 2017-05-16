@@ -72,7 +72,7 @@ The camera matrix ```mtx``` and distortion coefficients ```dst``` calculated dur
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-I used a combination of color and gradient thresholds to generate a binary image. These steps are in cell:14,15,16,17. I specifically applied ``` hls_lthresh``` and ```lab_bthresh``` and combined these two to produce final output from ```pipeline``` function.  Here's an example of my output for this step.  
+I wrote a class called ```Gradient``` which includes all requied functions and shared data between them. I used a combination of color and gradient thresholds to generate a binary image. These steps are in cell:14,15,16,17. I specifically applied ``` hls_lthresh``` and ```lab_bthresh``` and combined these two to produce final output from ```pipeline``` function.  Here's an example of my output for this step.  
 
 
 ![alt text][image2]
@@ -80,7 +80,7 @@ I used a combination of color and gradient thresholds to generate a binary image
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-The code for my perspective transform includes a function called `warper()`, which appears in lines 1 through 8 in the file `example.py` (output_images/examples/example.py) (or, for example, in the 3rd code cell of the IPython notebook).  The `warper()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
+The code for my perspective transform includes a function called `warper()` which is in cell 9 of Ipython notebook.  The `warper()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
 
 ```
 apex, apey = 360, 258
@@ -107,10 +107,12 @@ I verified that my perspective transform was working as expected by drawing the 
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
+I wrote a class called ``PolyFit`` by collecting all required functions and shared data to find polynomial and curvature etc. First I applied sliding window search as in function ```sliding_window_polyfit``` function in my `PolyFit` class to find initial polynomial and its starting point by using ```histogram``` and ```poly_coff``` supporting function within same class. Following is the image from this step:
 
 ![alt text][image4]
-Another image
+
+ Once the starting polynomial is found, the consecutive images in video frame get benefited from previously found polynomial and use ```polyfit_using_prev_fit```. Following is the result from this step:
+ 
 ![alt text][image5]
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.

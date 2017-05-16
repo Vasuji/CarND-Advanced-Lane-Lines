@@ -39,7 +39,7 @@ The goals / steps of this project are the following:
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  [Here](https://github.com/udacity/CarND-Advanced-Lane-Lines/blob/master/writeup_template.md) is a template writeup for this project you can use as a guide and a starting point.  
 
 
-***This writeup follows all work done in [CARND-Project4.ipynb](https://github.com/Vasuji/CarND-Advanced-Lane-Lines/blob/master/CARND-project4.ipynb) ***
+***This writeup follows all work done in*** [CARND-Project4.ipynb](https://github.com/Vasuji/CarND-Advanced-Lane-Lines/blob/master/CARND-project4.ipynb)
 
 ### Camera Calibration
 

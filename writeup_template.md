@@ -23,9 +23,9 @@ The goals / steps of this project are the following:
 [image11]: ./pic/undistort2.png "Undistorted2"
 [image2]: ./pic/pipeline.png "Pipeline binary"
 [image3]: ./pic/perspective.png "Perspective transform"
-[image4]: ./examples/warped_straight_lines.jpg "Warp Example"
-[image5]: ./examples/color_fit_lines.jpg "Fit Visual"
-[image6]: ./examples/example_output.jpg "Output"
+[image4]: ./pic/fit-poly1.png. "Fit polynomial with window search"
+[image5]: ./pic/fit-poly2.png "Fit polynomial using previous window"
+[image6]: ./pic/plot-lane.png "image-Output"
 [video1]: ./project_video.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
@@ -111,6 +111,8 @@ I verified that my perspective transform was working as expected by drawing the 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
+
+![alt text][image4]
 
 ![alt text][image5]
 

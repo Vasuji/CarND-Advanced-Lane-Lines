@@ -26,7 +26,7 @@ The goals / steps of this project are the following:
 [image4]: ./pic/fit-poly1.png "Fit polynomial with window search"
 [image5]: ./pic/fit-poly2.png "Fit polynomial using previous window"
 [image6]: ./pic/plot-lane.png "image-Output"
-[video1]: ./project_video.mp4 "Video"
+[video1]: ./project_video_output.mp4 "Video-output"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -38,7 +38,6 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  [Here](https://github.com/udacity/CarND-Advanced-Lane-Lines/blob/master/writeup_template.md) is a template writeup for this project you can use as a guide and a starting point.  
 
-You're reading it!
 
 *** This writeup follows all work done in ```CARND-Project4.ipynb```***
 
@@ -161,5 +160,3 @@ Here's a [link to my video result](./project_video_output.mp4)
 5. ***Rainy day and poor vision***: In these cases only camera photos may not provide enough information.
 
 
-
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  

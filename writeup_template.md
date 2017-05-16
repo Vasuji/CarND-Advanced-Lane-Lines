@@ -64,7 +64,7 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 
 #### 1. Provide an example of a distortion-corrected image.
 
-To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
+The distortation matrix ```mtx``` and distortion coefficients ```dst``` calculated during camera calibration is saved in pickle file which can be used whenever required. I used that pickle file and produced undistorted images using function ```undistort ``` at cell 7 and 8 . Following are the sample undistorted images I produced.
 
 ![alt text][image1]
 

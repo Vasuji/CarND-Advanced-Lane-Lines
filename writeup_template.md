@@ -23,7 +23,7 @@ The goals / steps of this project are the following:
 [image11]: ./pic/undistort2.png "Undistorted2"
 [image2]: ./pic/pipeline.png "Pipeline binary"
 [image3]: ./pic/perspective.png "Perspective transform"
-[image4]: ./pic/fit-poly1.png. "Fit polynomial with window search"
+[image4]: ./pic/fit-poly1.png "Fit polynomial with window search"
 [image5]: ./pic/fit-poly2.png "Fit polynomial using previous window"
 [image6]: ./pic/plot-lane.png "image-Output"
 [video1]: ./project_video.mp4 "Video"
@@ -113,7 +113,7 @@ I verified that my perspective transform was working as expected by drawing the 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
 
 ![alt text][image4]
-
+Another image
 ![alt text][image5]
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
